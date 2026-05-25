@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUPERB TILL NUMBERS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f8fafc;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 52px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #38bdf8, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    thead {
+      background: linear-gradient(90deg, #2563eb, #0ea5e9);
+    }
+
+    thead th {
+      padding: 18px;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    tbody tr {
+      transition: 0.3s ease;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    tbody tr:hover {
+      background: rgba(255,255,255,0.08);
+      transform: scale(1.002);
+    }
+
+    tbody td {
+      padding: 16px;
+      text-align: center;
+      color: #f1f5f9;
+      font-size: 15px;
+    }
+
+    .old {
+      color: #f87171;
+      font-weight: 700;
+    }
+
+    .new {
+      color: #4ade80;
+      font-weight: 700;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(34,197,94,0.15);
+      color: #4ade80;
+    }
+
+    .warning {
+      background: rgba(251,191,36,0.15);
+      color: #facc15;
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        padding: 18px;
+      }
+
+      .header h1 {
+        font-size: 36px;
+      }
+
+      table {
+        font-size: 12px;
+      }
+
+      tbody td, thead th {
+        padding: 10px;
+      }
+    }
+    /* Search input styles */
+    .controls { display:flex; gap:8px; margin-bottom:18px; align-items:center; }
+    #searchInput { flex:1; padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.02); color:#f8fafc }
+    #searchInput::placeholder{ color:#94a3b8 }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>SUPERB TILL NUMBERS</h1>
+      <p>Elegant Till Number Correction & POS Mapping Dashboard</p>
+    </div>
+
+    <div class="card">
+      <div class="controls">
+        <input id="searchInput" placeholder="Search till number, code, or terminal..." />
+        <button id="clearSearch" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:#cbd5e1;padding:8px 10px;border-radius:10px;cursor:pointer">Clear</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>#</th>
+            <th>Till Name</th>
+            <th>Terminal</th>
+            <th>Current POS</th>
+            <th>Current Code</th>
+            <th>Change To POS</th>
+            <th>Change To Code</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody contenteditable="true">
+<tr><td>RETAIL</td><td>1</td><td>TILL01</td><td>T001</td><td>POS3</td><td>240783</td><td>pos73</td><td>67279227</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>2</td><td>TILL02</td><td>T002</td><td>POS82</td><td>240824</td><td>POS82</td><td>240824</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>3</td><td>TILL03</td><td>T003</td><td>POS75</td><td>67279232</td><td>POS75</td><td>67279232</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>4</td><td>TILL04</td><td>T004</td><td>POS34</td><td>240815</td><td>POS34</td><td>240815</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>5</td><td>TILL05</td><td>T005</td><td>pos5</td><td>265770</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>6</td><td>TILL06</td><td>T006</td><td>POS6</td><td>265772</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>7</td><td>TILL07</td><td>T007</td><td>POS7</td><td>265775</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>8</td><td>TILL08</td><td>T008</td><td>POS22</td><td>240803</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>9</td><td>TILL09</td><td>T009</td><td>pos9</td><td>240787</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>10</td><td>TILL10</td><td>T010</td><td>pos10</td><td>240788</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>11</td><td>TILL11</td><td>T011</td><td>pos11</td><td>240790</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>12</td><td>TILL12</td><td>T012</td><td>pos12</td><td>240791</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>13</td><td>TILL13</td><td>T013</td><td>POS13</td><td>240792</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>14</td><td>TILL14</td><td>T014</td><td>POS14</td><td>240793</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>15</td><td>TILL15</td><td>T015</td><td>POS15</td><td>240794</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>16</td><td>TILL16</td><td>T016</td><td>POS16</td><td>240795</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>17</td><td>TILL17</td><td>T017</td><td>POS17</td><td>240797</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>18</td><td>TILL18</td><td>T018</td><td>POS18</td><td>240799</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>19</td><td>TILL19</td><td>T019</td><td>pos19</td><td>240800</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>20</td><td>TILL20</td><td>T020</td><td>POS20</td><td>240801</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>21</td><td>TILL21</td><td>T021</td><td>pos21</td><td>240802</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>22</td><td>TILL22</td><td>T022</td><td>POS45</td><td>240826</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>23</td><td>TILL23</td><td>T023</td><td>POS23</td><td>240804</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>24</td><td>TILL24</td><td>T024</td><td>POS24</td><td>240805</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>25</td><td>TILL25</td><td>T025</td><td>POS25</td><td>240806</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>26</td><td>TILL26</td><td>T026</td><td>POS26</td><td>240807</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>27</td><td>TILL27</td><td>T027</td><td>POS27</td><td>240808</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>28</td><td>TILL28</td><td>T028</td><td>POS28</td><td>240809</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>29</td><td>TILL29</td><td>T029</td><td>POS29</td><td>240810</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>30</td><td>TILL30</td><td>T030</td><td>POS30</td><td>240811</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>31</td><td>TILL31</td><td>T031</td><td>POS31</td><td>240812</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>32</td><td>TILL32</td><td>T032</td><td>POS32</td><td>240813</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>33</td><td>TILL33</td><td>T033</td><td>POS50</td><td>67232797</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>34</td><td>TILL34</td><td>T034</td><td>POS56</td><td>67232809</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>35</td><td>TILL35</td><td>T035</td><td>POS54</td><td>67232803</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>36</td><td>TILL36</td><td>T036</td><td>POS55</td><td>67232805</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>37</td><td>TILL37</td><td>T037</td><td>POS53</td><td>67232800</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>38</td><td>TILL38</td><td>T038</td><td>POS57</td><td>67232812</td><td>Pos71</td><td>67279216</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>39</td><td>TILL39</td><td>T039</td><td>POS59</td><td>67279230</td><td>pos74</td><td>67279230</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>40</td><td>TILL40</td><td>T040</td><td>POS47</td><td>240828</td><td>POS47</td><td>240828</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>41</td><td>TILL41</td><td>T041</td><td>POS42</td><td>240823</td><td>Pos81</td><td>67232817</td><td><span class="status">To Change</span></td></tr>
+<tr><td>RETAIL</td><td>42</td><td>TILL42</td><td>T042</td><td>POS40</td><td>240821</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>43</td><td>TILL43</td><td>T043</td><td>POS44</td><td>240825</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL</td><td>44</td><td>TILL44</td><td>T044</td><td>pos47</td><td>240828</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>MM2</td><td>45</td><td>TILL45</td><td>T045</td><td>pos42</td><td>240823</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>FINANCE</td><td>46</td><td>TILL46</td><td>T046</td><td>POS40</td><td>240821</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL EXPRESS</td><td>47</td><td>TILL47</td><td>T047</td><td>POS44</td><td>240825</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL EXPRESS</td><td>48</td><td>TILL48</td><td>T048</td><td>pos56</td><td>67232813</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL EXPRESS</td><td>49</td><td>TILL49</td><td>T049</td><td>POS41</td><td>240822</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL EXPRESS</td><td>50</td><td>TILL50</td><td>T050</td><td>POS60</td><td>67232867</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL EXPRESS</td><td>51</td><td>TILL51</td><td>T051</td><td>POS61</td><td>67232855</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>RETAIL EXPRESS</td><td>52</td><td>TILL52</td><td>T052</td><td>POS62</td><td>67232859</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>53</td><td>TILL53</td><td>T053</td><td>POS63</td><td>67232862</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>54</td><td>TILL54</td><td>T054</td><td>POS64</td><td>67232865</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>55</td><td>TILL55</td><td>T055</td><td>POS65</td><td>67232866</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>56</td><td>TILL56</td><td>T056</td><td>POS35</td><td>240816</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>57</td><td>TILL57</td><td>T057</td><td>pos36</td><td>240817</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>58</td><td>TILL58</td><td>T058</td><td>Pos69</td><td>67279203</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>59</td><td>TILL59</td><td>T059</td><td>Pos68</td><td>67279197</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>60</td><td>TILL60</td><td>T060</td><td>Pos70</td><td>67279207</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>61</td><td>TILL61</td><td>T061</td><td>Pos67</td><td>67279193</td><td>-</td><td>-</td><td><span class="status warning">Manual</span></td></tr>
+<tr><td>ONLINE</td><td>62</td><td>TILL62</td><td>T062</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>ONLINE</td><td>63</td><td>TILL63</td><td>T063</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>ONLINE</td><td>64</td><td>TILL64</td><td>T064</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>ONLINE</td><td>65</td><td>TILL65</td><td>T065</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>ONLINE</td><td>66</td><td>TILL66</td><td>T066</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>67</td><td>TILL67</td><td>T067</td><td>POS34</td><td>240815</td><td>pos4</td><td>240786</td><td><span class="status">To Change</span></td></tr>
+<tr><td>BULK</td><td>68</td><td>TILL68</td><td>T068</td><td>POS75</td><td>67279232</td><td>POS8</td><td>265779</td><td><span class="status">To Change</span></td></tr>
+<tr><td>BULK</td><td>69</td><td>TILL69</td><td>T069</td><td>POS82</td><td>240824</td><td>POS3</td><td>240783</td><td><span class="status">To Change</span></td></tr>
+<tr><td>BULK</td><td>70</td><td>TILL70</td><td>T070</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>71</td><td>TILL71</td><td>T071</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>72</td><td>TILL72</td><td>T072</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>73</td><td>TILL73</td><td>T073</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>74</td><td>TILL74</td><td>T074</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>75</td><td>TILL75</td><td>T075</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>76</td><td>TILL76</td><td>T076</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>77</td><td>TILL77</td><td>T077</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>78</td><td>TILL78</td><td>T078</td><td>pos73</td><td>67279227</td><td>POS3</td><td>240783</td><td><span class="status">To Change</span></td></tr>
+<tr><td>BULK</td><td>79</td><td>TILL79</td><td>T079</td><td>Pos81</td><td>67232817</td><td>POS42</td><td>240823</td><td><span class="status">To Change</span></td></tr>
+<tr><td>BULK</td><td>80</td><td>TILL80</td><td>T080</td><td>pos2</td><td>240785</td><td>-</td><td>-</td><td><span class="status warning">Review</span></td></tr>
+<tr><td>BULK</td><td>81</td><td>TILL81</td><td>T081</td><td>pos74</td><td>67279230</td><td>POS59</td><td>67232817</td><td><span class="status">To Change</span></td></tr>
+<tr><td>BULK</td><td>82</td><td>TILL82</td><td>T082</td><td>Pos71</td><td>67279216</td><td>POS57</td><td>67232812</td><td><span class="status">To Change</span></td></tr>
+<tr><td>BULK</td><td>83</td><td>TILL83</td><td>T083</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>84</td><td>TILL84</td><td>T084</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>85</td><td>TILL85</td><td>T085</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>86</td><td>TILL86</td><td>T086</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>87</td><td>TILL87</td><td>T087</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK</td><td>88</td><td>TILL88</td><td>T088</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK KIOSK</td><td>89</td><td>TILL89</td><td>T089</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+<tr><td>BULK KIOSK</td><td>90</td><td>TILL90</td><td>T090</td><td>-</td><td>-</td><td>-</td><td>-</td><td><span class="status warning">Available</span></td></tr>
+</tbody>
+      </table>
+
+      <div class="footer">
+        Editable HTML Dashboard • Styled for professional presentation • Generated from provided till mappings
+      </div>
+    </div>
+  </div>
+  <script>
+    // Simple client-side search for GitHub Pages compatibility
+    document.addEventListener('DOMContentLoaded', function(){
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearSearch');
+      const tbody = document.querySelector('tbody');
+
+      function filterRows(){
+        const q = input.value.trim().toLowerCase();
+        Array.from(tbody.querySelectorAll('tr')).forEach(tr => {
+          const text = tr.textContent.toLowerCase();
+          tr.style.display = q === '' ? '' : (text.includes(q) ? '' : 'none');
+        });
+      }
+
+      input.addEventListener('input', filterRows);
+      clearBtn.addEventListener('click', ()=>{ input.value=''; filterRows(); input.focus(); });
+    });
+  </script>
+</body>
+</html>
